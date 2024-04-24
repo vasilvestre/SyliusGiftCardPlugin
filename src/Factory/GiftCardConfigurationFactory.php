@@ -22,7 +22,7 @@ final class GiftCardConfigurationFactory implements GiftCardConfigurationFactory
         FactoryInterface $decoratedFactory,
         DefaultGiftCardTemplateContentProviderInterface $defaultGiftCardTemplateContentProvider,
         string $defaultOrientation,
-        string $defaultPageSize
+        string $defaultPageSize,
     ) {
         $this->decoratedFactory = $decoratedFactory;
         $this->defaultGiftCardTemplateContentProvider = $defaultGiftCardTemplateContentProvider;

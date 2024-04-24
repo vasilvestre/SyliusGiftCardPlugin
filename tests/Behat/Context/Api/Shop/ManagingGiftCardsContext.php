@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Api\Shop;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Api\Shop;
 
 use Behat\Behat\Context\Context;
 use Sylius\Behat\Client\ApiClientInterface;
@@ -24,7 +24,7 @@ final class ManagingGiftCardsContext implements Context
     public function __construct(
         ApiClientInterface $client,
         ResponseCheckerInterface $responseChecker,
-        SharedStorageInterface $sharedStorage
+        SharedStorageInterface $sharedStorage,
     ) {
         $this->client = $client;
         $this->responseChecker = $responseChecker;
@@ -134,7 +134,7 @@ final class ManagingGiftCardsContext implements Context
             'gift-cards',
             $giftCardCode,
             HTTPRequest::METHOD_PATCH,
-            'add-to-order'
+            'add-to-order',
         );
 
         $request->setContent(['orderTokenValue' => $this->sharedStorage->get('cart_token')]);
@@ -149,7 +149,7 @@ final class ManagingGiftCardsContext implements Context
             'gift-cards',
             $giftCardCode,
             HTTPRequest::METHOD_PATCH,
-            'remove-from-order'
+            'remove-from-order',
         );
 
         $request->setContent(['orderTokenValue' => $this->sharedStorage->get('cart_token')]);

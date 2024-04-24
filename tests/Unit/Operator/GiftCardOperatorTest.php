@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Operator;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Operator;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityManagerInterface;
@@ -11,12 +11,12 @@ use Prophecy\PhpUnit\ProphecyTrait;
 use Setono\SyliusGiftCardPlugin\EmailManager\GiftCardEmailManagerInterface;
 use Setono\SyliusGiftCardPlugin\Model\GiftCard;
 use Setono\SyliusGiftCardPlugin\Operator\OrderGiftCardOperator;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Order;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItem;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItemUnit;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Product;
 use Sylius\Component\Core\Model\Customer;
 use Sylius\Component\Core\Model\ProductVariant;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Order;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItem;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItemUnit;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Product;
 
 final class GiftCardOperatorTest extends TestCase
 {
@@ -52,7 +52,7 @@ final class GiftCardOperatorTest extends TestCase
 
         $orderGiftCardOperator = new OrderGiftCardOperator(
             $giftCardManager->reveal(),
-            $giftCardOrderEmailManager->reveal()
+            $giftCardOrderEmailManager->reveal(),
         );
 
         $orderGiftCardOperator->associateToCustomer($order);
@@ -72,7 +72,7 @@ final class GiftCardOperatorTest extends TestCase
 
         $orderGiftCardOperator = new OrderGiftCardOperator(
             $giftCardManager->reveal(),
-            $giftCardOrderEmailManager->reveal()
+            $giftCardOrderEmailManager->reveal(),
         );
 
         $orderGiftCardOperator->associateToCustomer($order->reveal());
@@ -110,7 +110,7 @@ final class GiftCardOperatorTest extends TestCase
 
         $orderGiftCardOperator = new OrderGiftCardOperator(
             $giftCardManager->reveal(),
-            $giftCardOrderEmailManager->reveal()
+            $giftCardOrderEmailManager->reveal(),
         );
 
         $orderGiftCardOperator->enable($order);
@@ -148,7 +148,7 @@ final class GiftCardOperatorTest extends TestCase
 
         $orderGiftCardOperator = new OrderGiftCardOperator(
             $giftCardManager->reveal(),
-            $giftCardOrderEmailManager->reveal()
+            $giftCardOrderEmailManager->reveal(),
         );
 
         $orderGiftCardOperator->disable($order);

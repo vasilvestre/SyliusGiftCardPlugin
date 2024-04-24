@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
+use Setono\SyliusGiftCardPlugin\Tests\Application\Kernel;
 use Symfony\Component\ErrorHandler\Debug;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Kernel;
 use Symfony\Component\HttpFoundation\Request;
 
-require dirname(__DIR__).'/config/bootstrap.php';
+require dirname(__DIR__) . '/config/bootstrap.php';
 
 if ($_SERVER['APP_DEBUG']) {
     umask(0000);

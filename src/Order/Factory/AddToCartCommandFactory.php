@@ -21,7 +21,7 @@ final class AddToCartCommandFactory implements AddToCartCommandFactoryInterface
      */
     public function __construct(
         string $className,
-        GiftCardInformationFactoryInterface $giftCardInformationFactory
+        GiftCardInformationFactoryInterface $giftCardInformationFactory,
     ) {
         $this->className = $className;
         $this->giftCardInformationFactory = $giftCardInformationFactory;

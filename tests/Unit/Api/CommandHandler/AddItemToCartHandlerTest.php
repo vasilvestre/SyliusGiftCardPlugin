@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Api\CommandHandler;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Api\CommandHandler;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityManagerInterface;
@@ -14,16 +14,16 @@ use Setono\SyliusGiftCardPlugin\Api\CommandHandler\AddItemToCartHandler;
 use Setono\SyliusGiftCardPlugin\Factory\GiftCardFactoryInterface;
 use Setono\SyliusGiftCardPlugin\Model\GiftCard;
 use Setono\SyliusGiftCardPlugin\Repository\OrderRepositoryInterface;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Order;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItem;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItemUnit;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Product;
 use Sylius\Bundle\ApiBundle\Command\Cart\AddItemToCart as SyliusAddItemToCart;
 use Sylius\Component\Core\Factory\CartItemFactoryInterface;
 use Sylius\Component\Core\Model\ProductVariant;
 use Sylius\Component\Core\Repository\ProductVariantRepositoryInterface;
 use Sylius\Component\Order\Modifier\OrderItemQuantityModifierInterface;
 use Sylius\Component\Order\Modifier\OrderModifierInterface;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Order;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItem;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItemUnit;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Product;
 
 final class AddItemToCartHandlerTest extends TestCase
 {

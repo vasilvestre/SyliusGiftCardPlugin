@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Model;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Model;
 
 use PHPUnit\Framework\TestCase;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Product;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Product;
 
 final class ProductTraitTest extends TestCase
 {

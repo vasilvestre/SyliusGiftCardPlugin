@@ -22,7 +22,7 @@ interface GiftCardFactoryInterface extends FactoryInterface
 
     public function createFromOrderItemUnitAndCart(
         OrderItemUnitInterface $orderItemUnit,
-        OrderInterface $cart
+        OrderInterface $cart,
     ): GiftCardInterface;
 
     /**

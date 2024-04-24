@@ -20,28 +20,14 @@ use Webmozart\Assert\Assert;
 
 final class GiftCardFactory implements GiftCardFactoryInterface
 {
-    private FactoryInterface $decoratedFactory;
-
-    private GiftCardCodeGeneratorInterface $giftCardCodeGenerator;
-
-    private GiftCardConfigurationProviderInterface $giftCardConfigurationProvider;
-
-    private DateTimeProvider $dateTimeProvider;
-
-    private CurrencyContextInterface $currencyContext;
-
     public function __construct(
-        FactoryInterface $decoratedFactory,
-        GiftCardCodeGeneratorInterface $giftCardCodeGenerator,
-        GiftCardConfigurationProviderInterface $giftCardConfigurationProvider,
-        DateTimeProvider $dateTimeProvider,
-        CurrencyContextInterface $currencyContext
+        private readonly FactoryInterface $decoratedFactory,
+        private readonly GiftCardCodeGeneratorInterface $giftCardCodeGenerator,
+        private readonly GiftCardConfigurationProviderInterface $giftCardConfigurationProvider,
+        /** @psalm-suppress DeprecatedInterface */
+        private readonly DateTimeProvider $dateTimeProvider,
+        private readonly CurrencyContextInterface $currencyContext,
     ) {
-        $this->decoratedFactory = $decoratedFactory;
-        $this->giftCardCodeGenerator = $giftCardCodeGenerator;
-        $this->giftCardConfigurationProvider = $giftCardConfigurationProvider;
-        $this->dateTimeProvider = $dateTimeProvider;
-        $this->currencyContext = $currencyContext;
     }
 
     public function createNew(): GiftCardInterface
@@ -100,7 +86,7 @@ final class GiftCardFactory implements GiftCardFactoryInterface
 
     public function createFromOrderItemUnitAndCart(
         OrderItemUnitInterface $orderItemUnit,
-        OrderInterface $cart
+        OrderInterface $cart,
     ): GiftCardInterface {
         $channel = $cart->getChannel();
         Assert::isInstanceOf($channel, ChannelInterface::class);

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Api\Controller\Action;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Api\Controller\Action;
 
 use ApiPlatform\Core\Api\IriConverterInterface;
 use InvalidArgumentException;
@@ -53,7 +53,7 @@ final class UploadGiftCardConfigurationImageActionTest extends TestCase
             $giftCardConfigurationImageFactory->reveal(),
             $giftCardConfigurationImageRepository->reveal(),
             $imageUploader->reveal(),
-            $iriConverter->reveal()
+            $iriConverter->reveal(),
         );
         $returnedImage = $uploadGiftCardConfigurationImageAction($request);
 
@@ -88,7 +88,7 @@ final class UploadGiftCardConfigurationImageActionTest extends TestCase
             $giftCardConfigurationImageFactory->reveal(),
             $giftCardConfigurationImageRepository->reveal(),
             $imageUploader->reveal(),
-            $iriConverter->reveal()
+            $iriConverter->reveal(),
         );
         $uploadGiftCardConfigurationImageAction($request);
     }
@@ -122,7 +122,7 @@ final class UploadGiftCardConfigurationImageActionTest extends TestCase
             $giftCardConfigurationImageFactory->reveal(),
             $giftCardConfigurationImageRepository->reveal(),
             $imageUploader->reveal(),
-            $iriConverter->reveal()
+            $iriConverter->reveal(),
         );
         $uploadGiftCardConfigurationImageAction($request);
     }
@@ -160,7 +160,7 @@ final class UploadGiftCardConfigurationImageActionTest extends TestCase
             $giftCardConfigurationImageFactory->reveal(),
             $giftCardConfigurationImageRepository->reveal(),
             $imageUploader->reveal(),
-            $iriConverter->reveal()
+            $iriConverter->reveal(),
         );
         $uploadGiftCardConfigurationImageAction($request);
     }
@@ -203,7 +203,7 @@ final class UploadGiftCardConfigurationImageActionTest extends TestCase
             $giftCardConfigurationImageFactory->reveal(),
             $giftCardConfigurationImageRepository->reveal(),
             $imageUploader->reveal(),
-            $iriConverter->reveal()
+            $iriConverter->reveal(),
         );
         $returnedImage = $uploadGiftCardConfigurationImageAction($request);
 

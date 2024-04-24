@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Order\Factory;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Order\Factory;
 
 use PHPUnit\Framework\TestCase;
 use Setono\SyliusGiftCardPlugin\Order\Factory\GiftCardInformationFactory;
 use Setono\SyliusGiftCardPlugin\Order\GiftCardInformation;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItem;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItem;
 
 final class GiftCardInformationFactoryTest extends TestCase
 {

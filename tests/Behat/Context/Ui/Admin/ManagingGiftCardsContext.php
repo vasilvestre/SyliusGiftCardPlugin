@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Ui\Admin;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Ui\Admin;
 
 use Behat\Behat\Context\Context;
 use Setono\SyliusGiftCardPlugin\Model\ProductInterface;
-use Tests\Setono\SyliusGiftCardPlugin\Behat\Page\Admin\Product\CreateSimpleProductPageInterface;
+use Setono\SyliusGiftCardPlugin\Tests\Behat\Page\Admin\Product\CreateSimpleProductPageInterface;
 use Webmozart\Assert\Assert;
 
 final class ManagingGiftCardsContext implements Context
@@ -15,7 +15,7 @@ final class ManagingGiftCardsContext implements Context
     private $createGiftCardPage;
 
     public function __construct(
-        CreateSimpleProductPageInterface $createGiftCardPage
+        CreateSimpleProductPageInterface $createGiftCardPage,
     ) {
         $this->createGiftCardPage = $createGiftCardPage;
     }

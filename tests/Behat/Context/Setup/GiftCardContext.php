@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Setup;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Setup;
 
 use Behat\Behat\Context\Context;
 use Doctrine\Persistence\ObjectManager;
@@ -32,7 +32,7 @@ final class GiftCardContext implements Context
         GiftCardRepositoryInterface $giftCardRepository,
         GiftCardFactoryInterface $giftCardFactory,
         ObjectManager $productManager,
-        MessageBusInterface $messageBus
+        MessageBusInterface $messageBus,
     ) {
         $this->sharedStorage = $sharedStorage;
         $this->giftCardRepository = $giftCardRepository;
@@ -71,7 +71,7 @@ final class GiftCardContext implements Context
     public function theStoreHasGiftCardWithCode(
         string $code,
         int $price,
-        ?ChannelInterface $channel = null
+        ?ChannelInterface $channel = null,
     ): void {
         if (null === $channel) {
             /** @var ChannelInterface $channel */
@@ -94,7 +94,7 @@ final class GiftCardContext implements Context
     public function theStoreHasGiftCardWithCodeForCustomer(
         string $code,
         int $price,
-        CustomerInterface $customer
+        CustomerInterface $customer,
     ): void {
         /** @var ChannelInterface $channel */
         $channel = $this->sharedStorage->get('channel');

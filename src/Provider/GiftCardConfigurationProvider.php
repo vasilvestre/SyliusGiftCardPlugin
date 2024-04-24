@@ -36,7 +36,7 @@ final class GiftCardConfigurationProvider implements GiftCardConfigurationProvid
         GiftCardConfigurationFactoryInterface $giftCardConfigurationFactory,
         LocaleContextInterface $localeContext,
         RepositoryInterface $localeRepository,
-        ManagerRegistry $managerRegistry
+        ManagerRegistry $managerRegistry,
     ) {
         $this->giftCardConfigurationRepository = $giftCardConfigurationRepository;
         $this->giftCardConfigurationFactory = $giftCardConfigurationFactory;

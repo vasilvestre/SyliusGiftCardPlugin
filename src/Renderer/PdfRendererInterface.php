@@ -19,6 +19,6 @@ interface PdfRendererInterface
         GiftCardInterface $giftCard,
         GiftCardConfigurationInterface $giftCardConfiguration = null,
         ChannelInterface $channel = null,
-        string $localeCode = null
+        string $localeCode = null,
     ): PdfResponse;
 }

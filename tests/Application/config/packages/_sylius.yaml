@@ -11,39 +11,30 @@ sylius_shop:
     product_grid:
         include_all_descendants: true
 
-sylius_core:
-    resources:
-        channel_pricing:
-            classes:
-                model: Tests\Setono\SyliusGiftCardPlugin\Application\Model\ChannelPricing
-                repository: Tests\Setono\SyliusGiftCardPlugin\Application\Repository\ChannelPricingRepository
+sylius_api:
+    enabled: true
 
 sylius_customer:
     resources:
         customer:
             classes:
-                repository: Tests\Setono\SyliusGiftCardPlugin\Application\Doctrine\ORM\CustomerRepository
+                repository: Setono\SyliusGiftCardPlugin\Tests\Application\Doctrine\ORM\CustomerRepository
 
 sylius_order:
     resources:
         order:
             classes:
-                model: Tests\Setono\SyliusGiftCardPlugin\Application\Model\Order
-                repository: Tests\Setono\SyliusGiftCardPlugin\Application\Doctrine\ORM\OrderRepository
+                model: Setono\SyliusGiftCardPlugin\Tests\Application\Model\Order
+                repository: Setono\SyliusGiftCardPlugin\Tests\Application\Doctrine\ORM\OrderRepository
         order_item:
             classes:
-                model: Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItem
+                model: Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItem
         order_item_unit:
             classes:
-                model: Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItemUnit
-                
+                model: Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItemUnit
+
 sylius_product:
     resources:
         product:
             classes:
-                model: Tests\Setono\SyliusGiftCardPlugin\Application\Model\Product
-                repository: Tests\Setono\SyliusGiftCardPlugin\Application\Repository\ProductRepository
-        product_variant:
-            classes:
-                repository: Tests\Setono\SyliusGiftCardPlugin\Application\Repository\ProductVariantRepository
-            
+                model: Setono\SyliusGiftCardPlugin\Tests\Application\Model\Product

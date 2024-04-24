@@ -30,7 +30,7 @@ final class AssociateConfigurationToChannelHandler
         ChannelRepositoryInterface $channelRepository,
         RepositoryInterface $localeRepository,
         RepositoryInterface $giftCardChannelConfigurationRepository,
-        FactoryInterface $giftCardChannelConfigurationFactory
+        FactoryInterface $giftCardChannelConfigurationFactory,
     ) {
         $this->giftCardConfigurationRepository = $giftCardConfigurationRepository;
         $this->channelRepository = $channelRepository;

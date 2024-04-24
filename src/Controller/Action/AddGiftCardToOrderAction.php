@@ -40,7 +40,7 @@ final class AddGiftCardToOrderAction
         GiftCardApplicatorInterface $giftCardApplicator,
         RedirectUrlResolverInterface $redirectRouteResolver,
         Environment $twig,
-        ManagerRegistry $managerRegistry
+        ManagerRegistry $managerRegistry,
     ) {
         $this->formFactory = $formFactory;
         $this->cartContext = $cartContext;

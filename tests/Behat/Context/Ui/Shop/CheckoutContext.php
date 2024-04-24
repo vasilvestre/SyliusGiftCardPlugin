@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Ui\Shop;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Ui\Shop;
 
 use Behat\Behat\Context\Context;
 use Doctrine\ORM\EntityManagerInterface;
@@ -31,7 +31,7 @@ final class CheckoutContext implements Context
         CheckoutCompleteContext $checkoutCompleteContext,
         OrderContext $orderContext,
         OrderRepositoryInterface $orderRepository,
-        EntityManagerInterface $giftCardManager
+        EntityManagerInterface $giftCardManager,
     ) {
         $this->checkoutCompleteContext = $checkoutCompleteContext;
         $this->orderContext = $orderContext;

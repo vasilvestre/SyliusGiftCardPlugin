@@ -33,7 +33,7 @@ final class UploadGiftCardConfigurationImageAction
         FactoryInterface $giftCardConfigurationImageFactory,
         RepositoryInterface $giftCardConfigurationImageRepository,
         ImageUploaderInterface $imageUploader,
-        $iriConverter
+        $iriConverter,
     ) {
         $this->giftCardConfigurationImageFactory = $giftCardConfigurationImageFactory;
         $this->giftCardConfigurationImageRepository = $giftCardConfigurationImageRepository;

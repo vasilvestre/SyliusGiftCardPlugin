@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Api\CommandHandler;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Api\CommandHandler;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
@@ -13,7 +13,7 @@ use Setono\SyliusGiftCardPlugin\Applicator\GiftCardApplicatorInterface;
 use Setono\SyliusGiftCardPlugin\Model\GiftCard;
 use Setono\SyliusGiftCardPlugin\Repository\GiftCardRepositoryInterface;
 use Setono\SyliusGiftCardPlugin\Repository\OrderRepositoryInterface;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Order;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Order;
 
 final class AddGiftCardToOrderHandlerTest extends TestCase
 {
@@ -41,7 +41,7 @@ final class AddGiftCardToOrderHandlerTest extends TestCase
         $addGiftCardToOrderHandler = new AddGiftCardToOrderHandler(
             $giftCardRepository->reveal(),
             $orderRepository->reveal(),
-            $giftCardApplicator->reveal()
+            $giftCardApplicator->reveal(),
         );
         $addGiftCardToOrderHandler($command);
     }
@@ -62,7 +62,7 @@ final class AddGiftCardToOrderHandlerTest extends TestCase
         $addGiftCardToOrderHandler = new AddGiftCardToOrderHandler(
             $giftCardRepository->reveal(),
             $orderRepository->reveal(),
-            $giftCardApplicator->reveal()
+            $giftCardApplicator->reveal(),
         );
         $addGiftCardToOrderHandler($command);
     }
@@ -84,7 +84,7 @@ final class AddGiftCardToOrderHandlerTest extends TestCase
         $addGiftCardToOrderHandler = new AddGiftCardToOrderHandler(
             $giftCardRepository->reveal(),
             $orderRepository->reveal(),
-            $giftCardApplicator->reveal()
+            $giftCardApplicator->reveal(),
         );
         $addGiftCardToOrderHandler($command);
     }
@@ -110,7 +110,7 @@ final class AddGiftCardToOrderHandlerTest extends TestCase
         $addGiftCardToOrderHandler = new AddGiftCardToOrderHandler(
             $giftCardRepository->reveal(),
             $orderRepository->reveal(),
-            $giftCardApplicator->reveal()
+            $giftCardApplicator->reveal(),
         );
         $addGiftCardToOrderHandler($command);
     }

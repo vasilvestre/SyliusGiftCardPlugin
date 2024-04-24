@@ -2,35 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Ui;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Ui;
 
 use Behat\Behat\Context\Context;
 use Setono\SyliusGiftCardPlugin\Doctrine\ORM\GiftCardRepository;
 use Setono\SyliusGiftCardPlugin\Model\ProductInterface;
+use Sylius\Behat\Service\Checker\EmailChecker;
 use Sylius\Component\Core\Model\OrderInterface;
 use Sylius\Component\Core\Repository\OrderRepositoryInterface;
-use Sylius\Component\Core\Test\Services\EmailCheckerInterface;
 use Webmozart\Assert\Assert;
 
 final class EmailContext implements Context
 {
-    /** @var EmailCheckerInterface */
-    private $emailChecker;
-
-    /** @var OrderRepositoryInterface */
-    private $orderRepository;
-
-    /** @var GiftCardRepository */
-    private $giftCardRepository;
-
     public function __construct(
-        EmailCheckerInterface $emailChecker,
-        OrderRepositoryInterface $orderRepository,
-        GiftCardRepository $giftCardRepository
+        private readonly EmailChecker $emailChecker,
+        private readonly OrderRepositoryInterface $orderRepository,
+        private readonly GiftCardRepository $giftCardRepository,
     ) {
-        $this->emailChecker = $emailChecker;
-        $this->orderRepository = $orderRepository;
-        $this->giftCardRepository = $giftCardRepository;
     }
 
     /**

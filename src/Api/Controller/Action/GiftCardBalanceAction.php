@@ -19,7 +19,7 @@ final class GiftCardBalanceAction
     public function __invoke(): GiftCardBalanceCollection
     {
         return GiftCardBalanceCollection::createFromGiftCards(
-            $this->giftCardRepository->findEnabled()
+            $this->giftCardRepository->findEnabled(),
         );
     }
 }

@@ -23,7 +23,7 @@ final class AddGiftCardToOrderHandler
     public function __construct(
         GiftCardRepositoryInterface $giftCardRepository,
         OrderRepositoryInterface $orderRepository,
-        GiftCardApplicatorInterface $giftCardApplicator
+        GiftCardApplicatorInterface $giftCardApplicator,
     ) {
         $this->giftCardRepository = $giftCardRepository;
         $this->orderRepository = $orderRepository;

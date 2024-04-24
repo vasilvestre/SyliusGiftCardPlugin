@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Page\Shop\Product;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Page\Shop\Product;
 
 use Sylius\Behat\Page\Shop\Product\ShowPage as BaseShowPage;
 

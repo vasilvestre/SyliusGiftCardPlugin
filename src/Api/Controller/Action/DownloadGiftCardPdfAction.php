@@ -19,7 +19,7 @@ final class DownloadGiftCardPdfAction
 
     public function __construct(
         GiftCardConfigurationProviderInterface $configurationProvider,
-        PdfRendererInterface $giftCardPDFRenderer
+        PdfRendererInterface $giftCardPDFRenderer,
     ) {
         $this->configurationProvider = $configurationProvider;
         $this->pdfRenderer = $giftCardPDFRenderer;

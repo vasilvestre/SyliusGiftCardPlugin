@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Model;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Model;
 
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Setono\SyliusGiftCardPlugin\Model\GiftCard;
 use Setono\SyliusGiftCardPlugin\Model\OrderItemUnitInterface;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItem;
 use Sylius\Component\Core\Model\Channel;
 use Sylius\Component\Core\Model\Customer;
 use Sylius\Component\Core\Model\Order;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItem;
 
 final class GiftCardTest extends TestCase
 {

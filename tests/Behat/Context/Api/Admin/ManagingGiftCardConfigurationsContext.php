@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Api\Admin;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Api\Admin;
 
 use ApiPlatform\Core\Api\IriConverterInterface;
 use Behat\Behat\Context\Context;
@@ -25,7 +25,7 @@ final class ManagingGiftCardConfigurationsContext implements Context
     public function __construct(
         ApiClientInterface $client,
         ResponseCheckerInterface $responseChecker,
-        IriConverterInterface $iriConverter
+        IriConverterInterface $iriConverter,
     ) {
         $this->client = $client;
         $this->responseChecker = $responseChecker;
@@ -62,14 +62,14 @@ final class ManagingGiftCardConfigurationsContext implements Context
     public function iAssociateGiftCardConfigurationToChannelAndLocale(
         string $code,
         ChannelInterface $channel,
-        string $localeCode
+        string $localeCode,
     ): void {
         $request = Request::customItemAction(
             'admin',
             'gift-card-configurations',
             $code,
             HTTPRequest::METHOD_PATCH,
-            'associate-channel'
+            'associate-channel',
         );
 
         $request->setContent([
@@ -123,7 +123,7 @@ final class ManagingGiftCardConfigurationsContext implements Context
 
         Assert::false(
             $this->responseChecker->hasItemWithValue($response, 'code', $code),
-            sprintf('Gift card configuration with code %s still exists, but it should not', $code)
+            sprintf('Gift card configuration with code %s still exists, but it should not', $code),
         );
     }
 

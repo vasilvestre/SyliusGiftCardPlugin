@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Api\DataPersister;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Api\DataPersister;
 
 use ApiPlatform\Core\DataPersister\ContextAwareDataPersisterInterface;
 use PHPUnit\Framework\TestCase;

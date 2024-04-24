@@ -28,7 +28,7 @@ final class ResendGiftCardEmailAction
     public function __construct(
         GiftCardEmailManagerInterface $giftCardEmailManager,
         GiftCardRepositoryInterface $giftCardRepository,
-        UrlGeneratorInterface $router
+        UrlGeneratorInterface $router,
     ) {
         $this->giftCardEmailManager = $giftCardEmailManager;
         $this->giftCardRepository = $giftCardRepository;

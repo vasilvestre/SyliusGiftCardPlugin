@@ -20,7 +20,7 @@ final class GiftCardApplicator implements GiftCardApplicatorInterface
 
     public function __construct(
         GiftCardRepositoryInterface $giftCardRepository,
-        OrderProcessorInterface $orderProcessor
+        OrderProcessorInterface $orderProcessor,
     ) {
         $this->giftCardRepository = $giftCardRepository;
         $this->orderProcessor = $orderProcessor;

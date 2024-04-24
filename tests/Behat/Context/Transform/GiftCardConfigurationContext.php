@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Transform;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Transform;
 
 use Behat\Behat\Context\Context;
 use Setono\SyliusGiftCardPlugin\Model\GiftCardConfigurationInterface;

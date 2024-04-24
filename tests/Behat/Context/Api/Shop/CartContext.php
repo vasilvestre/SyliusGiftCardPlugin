@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Api\Shop;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Api\Shop;
 
 use ApiPlatform\Core\Api\IriConverterInterface;
 use Behat\Behat\Context\Context;
@@ -31,7 +31,7 @@ final class CartContext implements Context
         ResponseCheckerInterface $responseChecker,
         SharedStorageInterface $sharedStorage,
         ProductVariantResolverInterface $productVariantResolver,
-        IriConverterInterface $iriConverter
+        IriConverterInterface $iriConverter,
     ) {
         $this->cartsClient = $cartsClient;
         $this->responseChecker = $responseChecker;

@@ -35,7 +35,7 @@ final class GiftCardConfigurationType extends AbstractResourceType
         array $availablePageSizes,
         array $preferredPageSizes,
         string $dataClass,
-        array $validationGroups = []
+        array $validationGroups = [],
     ) {
         parent::__construct($dataClass, $validationGroups);
 
@@ -114,8 +114,8 @@ final class GiftCardConfigurationType extends AbstractResourceType
 
                     /** @psalm-suppress MixedArgumentTypeCoercion */
                     return \implode(' ', $data);
-                }
-            )
+                },
+            ),
         );
     }
 

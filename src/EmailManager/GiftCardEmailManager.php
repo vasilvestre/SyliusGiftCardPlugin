@@ -35,7 +35,7 @@ final class GiftCardEmailManager implements GiftCardEmailManagerInterface
         CustomerChannelResolverInterface $customerChannelResolver,
         LocaleResolverInterface $customerLocaleResolver,
         PdfRendererInterface $pdfRenderer,
-        string $cacheDir
+        string $cacheDir,
     ) {
         $this->sender = $sender;
         $this->translator = $translator;
@@ -67,7 +67,7 @@ final class GiftCardEmailManager implements GiftCardEmailManagerInterface
                     // We still need to inject locale to templates because layout is using it
                     'localeCode' => $localeCode,
                 ],
-                $this->generateAttachments($giftCard)
+                $this->generateAttachments($giftCard),
             );
         });
     }
@@ -103,7 +103,7 @@ final class GiftCardEmailManager implements GiftCardEmailManagerInterface
                     // We still need to inject locale to templates because layout is using it
                     'localeCode' => $localeCode,
                 ],
-                $this->generateAttachments($giftCards)
+                $this->generateAttachments($giftCards),
             );
         });
     }

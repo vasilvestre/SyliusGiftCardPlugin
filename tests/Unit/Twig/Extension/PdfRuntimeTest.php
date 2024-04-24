@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Twig\Extension;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Twig\Extension;
 
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
@@ -33,7 +33,7 @@ final class PdfRuntimeTest extends TestCase
 
         $runtime = new PdfRuntime(
             $giftCardPDFRenderer->reveal(),
-            $giftCardFactory->reveal()
+            $giftCardFactory->reveal(),
         );
         $base64Content = $runtime->getBase64EncodedExamplePdfContent($giftCardConfiguration);
 

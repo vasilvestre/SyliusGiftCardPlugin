@@ -43,7 +43,7 @@ final class AddItemToCartHandler
         CartItemFactoryInterface $cartItemFactory,
         OrderItemQuantityModifierInterface $orderItemQuantityModifier,
         GiftCardFactoryInterface $giftCardFactory,
-        EntityManagerInterface $giftCardManager
+        EntityManagerInterface $giftCardManager,
     ) {
         $this->orderRepository = $orderRepository;
         $this->productVariantRepository = $productVariantRepository;

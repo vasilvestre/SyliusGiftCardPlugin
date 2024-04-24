@@ -27,7 +27,7 @@ class CreateGiftCardConfiguration
         ?string $defaultValidityPeriod = null,
         ?string $pageSize = null,
         ?string $orientation = null,
-        ?string $template = null
+        ?string $template = null,
     ) {
         $this->code = $code;
         $this->default = $default;

@@ -28,7 +28,7 @@ final class GenerateEncodedExamplePdfAction
         GiftCardFactoryInterface $giftCardFactory,
         GiftCardConfigurationRepositoryInterface $giftCardConfigurationRepository,
         PdfRendererInterface $giftCardPDFRenderer,
-        FormFactoryInterface $formFactory
+        FormFactoryInterface $formFactory,
     ) {
         $this->giftCardFactory = $giftCardFactory;
         $this->giftCardConfigurationRepository = $giftCardConfigurationRepository;

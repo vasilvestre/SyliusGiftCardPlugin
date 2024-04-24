@@ -18,7 +18,7 @@ class AddToCartCommand implements AddToCartCommandInterface
     public function __construct(
         OrderInterface $cart,
         OrderItemInterface $cartItem,
-        GiftCardInformationInterface $giftCardInformation
+        GiftCardInformationInterface $giftCardInformation,
     ) {
         $this->cart = $cart;
         $this->cartItem = $cartItem;
