@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Application\Model;
+namespace Setono\SyliusGiftCardPlugin\Tests\Application\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 use Setono\SyliusGiftCardPlugin\Model\OrderItemUnitInterface as SetonoSyliusGiftCardOrderItemUnitInterface;
@@ -11,6 +11,7 @@ use Sylius\Component\Core\Model\OrderItemUnit as BaseOrderItemUnit;
 
 /**
  * @ORM\Entity
+ *
  * @ORM\Table(name="sylius_order_item_unit")
  */
 class OrderItemUnit extends BaseOrderItemUnit implements SetonoSyliusGiftCardOrderItemUnitInterface

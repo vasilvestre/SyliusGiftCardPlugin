@@ -36,7 +36,7 @@ final class AddToCartGiftCardInformationType extends AbstractType
         array $validationGroups,
         CurrencyContextInterface $currencyContext,
         ProductVariantResolverInterface $productVariantResolver,
-        ChannelContextInterface $channelContext
+        ChannelContextInterface $channelContext,
     ) {
         $this->dataClass = $dataClass;
         $this->validationGroups = $validationGroups;

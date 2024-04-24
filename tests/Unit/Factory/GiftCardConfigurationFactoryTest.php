@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Factory;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Factory;
 
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
@@ -35,7 +35,7 @@ final class GiftCardConfigurationFactoryTest extends TestCase
             $decoratedFactory->reveal(),
             $defaultGiftCardTemplateContentProvider->reveal(),
             $defaultOrientation,
-            $defaultPageSize
+            $defaultPageSize,
         );
         $createdGiftCardConfiguration = $factory->createNew();
 

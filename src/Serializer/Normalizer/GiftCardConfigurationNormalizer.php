@@ -23,7 +23,7 @@ final class GiftCardConfigurationNormalizer implements ContextAwareNormalizerInt
     public function __construct(
         ObjectNormalizer $objectNormalizer,
         RequestStack $requestStack,
-        string $publicMediaDirectory
+        string $publicMediaDirectory,
     ) {
         $this->objectNormalizer = $objectNormalizer;
         $this->requestStack = $requestStack;
@@ -78,7 +78,7 @@ final class GiftCardConfigurationNormalizer implements ContextAwareNormalizerInt
         return $data instanceof GiftCardConfigurationInterface && in_array(
             'setono:sylius-gift-card:render',
             $groups,
-            true
+            true,
         );
     }
 }

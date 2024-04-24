@@ -34,7 +34,7 @@ final class GiftCardType extends AbstractResourceType
         string $dataClass,
         RepositoryInterface $currencyRepository,
         GiftCardCodeGeneratorInterface $giftCardCodeGenerator,
-        array $validationGroups = []
+        array $validationGroups = [],
     ) {
         parent::__construct($dataClass, $validationGroups);
 

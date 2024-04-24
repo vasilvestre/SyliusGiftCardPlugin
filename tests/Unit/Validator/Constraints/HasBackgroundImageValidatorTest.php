@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Validator\Constraints;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Validator\Constraints;
 
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Factory;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Factory;
 
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
@@ -12,15 +12,15 @@ use Setono\SyliusGiftCardPlugin\Model\GiftCard;
 use Setono\SyliusGiftCardPlugin\Model\GiftCardConfiguration;
 use Setono\SyliusGiftCardPlugin\Model\GiftCardInterface;
 use Setono\SyliusGiftCardPlugin\Provider\GiftCardConfigurationProviderInterface;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Order;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItem;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItemUnit;
 use Sylius\Bundle\ShippingBundle\Provider\Calendar;
 use Sylius\Bundle\ShippingBundle\Provider\DateTimeProvider;
 use Sylius\Component\Core\Model\Channel;
 use Sylius\Component\Core\Model\Customer;
 use Sylius\Component\Currency\Context\CurrencyContextInterface;
 use Sylius\Component\Resource\Factory\FactoryInterface;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Order;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItem;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItemUnit;
 
 final class GiftCardFactoryTest extends TestCase
 {
@@ -46,7 +46,7 @@ final class GiftCardFactoryTest extends TestCase
             $giftCardCodeGenerator->reveal(),
             $configurationProvider->reveal(),
             new Calendar(),
-            $currencyContext->reveal()
+            $currencyContext->reveal(),
         );
         $createdGiftCard = $factory->createNew();
 
@@ -76,7 +76,7 @@ final class GiftCardFactoryTest extends TestCase
             $giftCardCodeGenerator->reveal(),
             $configurationProvider->reveal(),
             new Calendar(),
-            $currencyContext->reveal()
+            $currencyContext->reveal(),
         );
         $createdGiftCard = $factory->createForChannel($channel);
 
@@ -112,7 +112,7 @@ final class GiftCardFactoryTest extends TestCase
             $giftCardCodeGenerator->reveal(),
             $configurationProvider->reveal(),
             $calendar->reveal(),
-            $currencyContext->reveal()
+            $currencyContext->reveal(),
         );
         $createdGiftCard = $factory->createForChannel($channel);
 
@@ -143,7 +143,7 @@ final class GiftCardFactoryTest extends TestCase
             $giftCardCodeGenerator->reveal(),
             $configurationProvider->reveal(),
             new Calendar(),
-            $currencyContext->reveal()
+            $currencyContext->reveal(),
         );
         $createdGiftCard = $factory->createForChannelFromAdmin($channel);
 
@@ -180,7 +180,7 @@ final class GiftCardFactoryTest extends TestCase
             $giftCardCodeGenerator->reveal(),
             $configurationProvider->reveal(),
             new Calendar(),
-            $currencyContext->reveal()
+            $currencyContext->reveal(),
         );
         $createdGiftCard = $factory->createFromOrderItemUnitAndCart($orderItemUnit->reveal(), $cart);
 
@@ -227,7 +227,7 @@ final class GiftCardFactoryTest extends TestCase
             $giftCardCodeGenerator->reveal(),
             $configurationProvider->reveal(),
             new Calendar(),
-            $currencyContext->reveal()
+            $currencyContext->reveal(),
         );
         $createdGiftCard = $factory->createFromOrderItemUnit($orderItemUnit->reveal());
 
@@ -262,7 +262,7 @@ final class GiftCardFactoryTest extends TestCase
             $giftCardCodeGenerator->reveal(),
             $configurationProvider->reveal(),
             new Calendar(),
-            $currencyContext->reveal()
+            $currencyContext->reveal(),
         );
         $returnedGiftCard = $factory->createExample();
         $this->assertEquals(1500, $returnedGiftCard->getAmount());

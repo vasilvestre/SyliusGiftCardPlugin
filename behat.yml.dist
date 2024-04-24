@@ -40,7 +40,7 @@ default:
         FriendsOfBehat\SymfonyExtension:
             bootstrap: tests/Application/config/bootstrap.php
             kernel:
-                class: Tests\Setono\SyliusGiftCardPlugin\Application\Kernel
+                class: Setono\SyliusGiftCardPlugin\Tests\Application\Kernel
 
         FriendsOfBehat\VariadicExtension: ~
 

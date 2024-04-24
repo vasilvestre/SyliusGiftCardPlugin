@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Page\Shop\Cart;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Page\Shop\Cart;
 
 use Sylius\Behat\Page\Shop\Cart\SummaryPage as BaseSummaryPage;
 

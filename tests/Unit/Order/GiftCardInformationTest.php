@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Order;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Order;
 
 use PHPUnit\Framework\TestCase;
 use Setono\SyliusGiftCardPlugin\Order\GiftCardInformation;

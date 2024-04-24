@@ -18,7 +18,7 @@ final class SearchGiftCardAction
 
     public function __construct(
         FormFactoryInterface $formFactory,
-        Environment $twig
+        Environment $twig,
     ) {
         $this->formFactory = $formFactory;
         $this->twig = $twig;

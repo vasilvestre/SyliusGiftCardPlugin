@@ -31,7 +31,7 @@ final class RemoveGiftCardFromOrderAction
         CartContextInterface $cartContext,
         GiftCardApplicatorInterface $giftCardApplicator,
         RedirectUrlResolverInterface $redirectRouteResolver,
-        ManagerRegistry $managerRegistry
+        ManagerRegistry $managerRegistry,
     ) {
         $this->cartContext = $cartContext;
         $this->giftCardApplicator = $giftCardApplicator;

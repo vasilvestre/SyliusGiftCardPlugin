@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Api\CommandHandler;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Api\CommandHandler;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use InvalidArgumentException;
@@ -66,7 +66,7 @@ class AssociateConfigurationToChannelHandlerTest extends TestCase
             $channelRepository->reveal(),
             $localeRepository->reveal(),
             $giftCardChannelConfigurationRepository->reveal(),
-            $giftCardChannelConfigurationFactory->reveal()
+            $giftCardChannelConfigurationFactory->reveal(),
         );
         $returnedConfiguration = $handler($command);
 
@@ -122,7 +122,7 @@ class AssociateConfigurationToChannelHandlerTest extends TestCase
             $channelRepository->reveal(),
             $localeRepository->reveal(),
             $giftCardChannelConfigurationRepository->reveal(),
-            $giftCardChannelConfigurationFactory->reveal()
+            $giftCardChannelConfigurationFactory->reveal(),
         );
         $returnedConfiguration = $handler($command);
 
@@ -149,7 +149,7 @@ class AssociateConfigurationToChannelHandlerTest extends TestCase
             $channelRepository->reveal(),
             $localeRepository->reveal(),
             $giftCardChannelConfigurationRepository->reveal(),
-            $giftCardChannelConfigurationFactory->reveal()
+            $giftCardChannelConfigurationFactory->reveal(),
         );
         $handler($command);
     }
@@ -175,7 +175,7 @@ class AssociateConfigurationToChannelHandlerTest extends TestCase
             $channelRepository->reveal(),
             $localeRepository->reveal(),
             $giftCardChannelConfigurationRepository->reveal(),
-            $giftCardChannelConfigurationFactory->reveal()
+            $giftCardChannelConfigurationFactory->reveal(),
         );
         $handler($command);
     }
@@ -207,7 +207,7 @@ class AssociateConfigurationToChannelHandlerTest extends TestCase
             $channelRepository->reveal(),
             $localeRepository->reveal(),
             $giftCardChannelConfigurationRepository->reveal(),
-            $giftCardChannelConfigurationFactory->reveal()
+            $giftCardChannelConfigurationFactory->reveal(),
         );
         $handler($command);
     }
@@ -243,7 +243,7 @@ class AssociateConfigurationToChannelHandlerTest extends TestCase
             $channelRepository->reveal(),
             $localeRepository->reveal(),
             $giftCardChannelConfigurationRepository->reveal(),
-            $giftCardChannelConfigurationFactory->reveal()
+            $giftCardChannelConfigurationFactory->reveal(),
         );
         $handler($command);
     }

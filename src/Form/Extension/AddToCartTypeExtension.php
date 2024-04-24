@@ -25,7 +25,7 @@ final class AddToCartTypeExtension extends AbstractTypeExtension
 
     public function __construct(
         GiftCardFactoryInterface $giftCardFactory,
-        EntityManagerInterface $giftCardManager
+        EntityManagerInterface $giftCardManager,
     ) {
         $this->giftCardFactory = $giftCardFactory;
         $this->giftCardManager = $giftCardManager;

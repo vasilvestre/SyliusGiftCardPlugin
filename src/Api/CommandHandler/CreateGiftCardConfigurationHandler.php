@@ -17,7 +17,7 @@ final class CreateGiftCardConfigurationHandler
 
     public function __construct(
         GiftCardConfigurationFactoryInterface $giftCardConfigurationFactory,
-        ObjectManager $giftCardConfigurationManager
+        ObjectManager $giftCardConfigurationManager,
     ) {
         $this->giftCardConfigurationFactory = $giftCardConfigurationFactory;
         $this->giftCardConfigurationManager = $giftCardConfigurationManager;

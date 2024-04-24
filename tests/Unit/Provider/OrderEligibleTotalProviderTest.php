@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Provider;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Provider;
 
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Setono\SyliusGiftCardPlugin\Model\GiftCard;
 use Setono\SyliusGiftCardPlugin\Provider\OrderEligibleTotalProvider;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Order;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Order;
 
 final class OrderEligibleTotalProviderTest extends TestCase
 {

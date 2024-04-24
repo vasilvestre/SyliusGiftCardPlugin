@@ -17,7 +17,7 @@ final class PdfRuntime implements RuntimeExtensionInterface
 
     public function __construct(
         PdfRendererInterface $giftCardPDFRenderer,
-        GiftCardFactoryInterface $giftCardFactory
+        GiftCardFactoryInterface $giftCardFactory,
     ) {
         $this->PDFRenderer = $giftCardPDFRenderer;
         $this->giftCardFactory = $giftCardFactory;

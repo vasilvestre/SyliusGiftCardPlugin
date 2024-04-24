@@ -11,7 +11,6 @@ interface OrderInterface extends BaseOrderInterface
 {
     /**
      * @psalm-return Collection<array-key, GiftCardInterface>
-     *
      * @return Collection|GiftCardInterface[]
      */
     public function getGiftCards(): Collection;

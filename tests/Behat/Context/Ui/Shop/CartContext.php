@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Ui\Shop;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Ui\Shop;
 
 use Behat\Behat\Context\Context;
 use Setono\SyliusGiftCardPlugin\Model\ProductInterface;
-use Tests\Setono\SyliusGiftCardPlugin\Behat\Page\Shop\Cart\SummaryPageInterface;
-use Tests\Setono\SyliusGiftCardPlugin\Behat\Page\Shop\Product\ShowPageInterface;
+use Setono\SyliusGiftCardPlugin\Tests\Behat\Page\Shop\Cart\SummaryPageInterface;
+use Setono\SyliusGiftCardPlugin\Tests\Behat\Page\Shop\Product\ShowPageInterface;
 use Webmozart\Assert\Assert;
 
 final class CartContext implements Context

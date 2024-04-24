@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Security;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Security;
 
 use PHPUnit\Framework\TestCase;
 use Setono\SyliusGiftCardPlugin\Model\GiftCard;
@@ -24,7 +24,7 @@ class GiftCardVoterTest extends TestCase
 
         $this->assertSame(
             Voter::ACCESS_GRANTED,
-            $voter->vote($token, $giftCard, [GiftCardVoter::READ])
+            $voter->vote($token, $giftCard, [GiftCardVoter::READ]),
         );
     }
 
@@ -42,7 +42,7 @@ class GiftCardVoterTest extends TestCase
 
         $this->assertSame(
             Voter::ACCESS_GRANTED,
-            $voter->vote($token, $giftCard, [GiftCardVoter::READ])
+            $voter->vote($token, $giftCard, [GiftCardVoter::READ]),
         );
     }
 
@@ -58,7 +58,7 @@ class GiftCardVoterTest extends TestCase
 
         $this->assertSame(
             Voter::ACCESS_GRANTED,
-            $voter->vote($token, $giftCard, [GiftCardVoter::READ])
+            $voter->vote($token, $giftCard, [GiftCardVoter::READ]),
         );
     }
 
@@ -77,7 +77,7 @@ class GiftCardVoterTest extends TestCase
 
         $this->assertSame(
             Voter::ACCESS_DENIED,
-            $voter->vote($token, $giftCard, [GiftCardVoter::READ])
+            $voter->vote($token, $giftCard, [GiftCardVoter::READ]),
         );
     }
 }

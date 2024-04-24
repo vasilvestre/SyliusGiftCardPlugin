@@ -15,7 +15,6 @@
         "string",
         "true",
         "void",
-        "ApiPlatform\\Core\\Bridge\\Doctrine\\Orm\\Util\\QueryNameGeneratorInterface",
-        "Setono\\SyliusCatalogPromotionPlugin\\Rule\\Rule"
+        "ApiPlatform\\Core\\Bridge\\Doctrine\\Orm\\Util\\QueryNameGeneratorInterface"
     ]
 }

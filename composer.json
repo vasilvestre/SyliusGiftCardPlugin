@@ -4,14 +4,14 @@
     "license": "MIT",
     "type": "sylius-plugin",
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.1",
         "ext-filter": "*",
         "ext-mbstring": "*",
         "api-platform/core": "^2.6",
         "doctrine/collections": "^1.8",
         "doctrine/dbal": "^2.13 || ^3.0",
         "doctrine/orm": "^2.7",
-        "doctrine/persistence": "^1.3 || ^2.5",
+        "doctrine/persistence": "^1.3 || ^2.5 || ^3.0",
         "fakerphp/faker": "^1.21",
         "knplabs/knp-menu": "^3.3",
         "knplabs/knp-snappy": "^1.4",
@@ -38,46 +38,51 @@
         "sylius/shipping-bundle": "^1.0",
         "sylius/ui-bundle": "^1.0",
         "sylius/user": "^1.0",
-        "symfony/config": "^5.4 || ^6.0",
-        "symfony/dependency-injection": "^5.4 || ^6.0",
-        "symfony/event-dispatcher": "^5.4 || ^6.0",
-        "symfony/form": "^5.4 || ^6.0",
-        "symfony/http-foundation": "^5.4 || ^6.0",
-        "symfony/http-kernel": "^5.4 || ^6.0",
-        "symfony/messenger": "^5.4 || ^6.0",
-        "symfony/options-resolver": "^5.4 || ^6.0",
-        "symfony/property-access": "^5.4 || ^6.0",
-        "symfony/routing": "^5.4 || ^6.0",
-        "symfony/security-core": "^5.4 || ^6.0",
-        "symfony/serializer": "^5.4 || ^6.0",
+        "symfony/config": "^5.4 || ^6.4",
+        "symfony/dependency-injection": "^5.4 || ^6.4",
+        "symfony/event-dispatcher": "^5.4 || ^6.4",
+        "symfony/form": "^5.4 || ^6.4",
+        "symfony/http-foundation": "^5.4 || ^6.4",
+        "symfony/http-kernel": "^5.4 || ^6.4",
+        "symfony/messenger": "^5.4 || ^6.4",
+        "symfony/options-resolver": "^5.4 || ^6.4",
+        "symfony/property-access": "^5.4 || ^6.4",
+        "symfony/routing": "^5.4 || ^6.4",
+        "symfony/security-core": "^5.4 || ^6.4",
+        "symfony/serializer": "^5.4 || ^6.4",
         "symfony/translation-contracts": "^2.4",
-        "symfony/validator": "^5.4 || ^6.0",
+        "symfony/validator": "^5.4 || ^6.4",
         "twig/twig": "^2.15 || ^3.5",
         "webimpress/safe-writer": "^2.2",
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
-        "lexik/jwt-authentication-bundle": "^2.19",
-        "matthiasnoback/symfony-config-test": "^4.3",
-        "matthiasnoback/symfony-dependency-injection-test": "^4.3",
+        "babdev/pagerfanta-bundle": "^3.8",
+        "behat/behat": "^3.14",
+        "doctrine/doctrine-bundle": "^2.7",
+        "infection/infection": "^0.27.10",
+        "jms/serializer-bundle": "^4.2",
+        "lexik/jwt-authentication-bundle": "^2.17",
+        "matthiasnoback/symfony-config-test": "^4.3 || ^5.1",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.3 || ^5.1",
         "php-http/message-factory": "^1.1",
         "phpspec/phpspec": "^7.4",
         "phpspec/prophecy-phpunit": "^2.0.2",
-        "phpunit/phpunit": "^9.6.13",
-        "psalm/plugin-phpunit": "^0.18",
+        "phpunit/phpunit": "^9.6.17",
+        "polishsymfonycommunity/symfony-mocker-container": "^1.0.7",
+        "psalm/plugin-phpunit": "^0.18.4",
         "psalm/plugin-symfony": "^5.0",
-        "setono/code-quality-pack": "^2.6",
+        "setono/code-quality-pack": "^2.7",
         "setono/sylius-behat-pack": "^0.2.2",
-        "setono/sylius-catalog-promotion-plugin": "^0.4.8 || ^0.5",
-        "sylius/sylius": "~1.10.14",
-        "symfony/debug-bundle": "^5.4 || ^6.0",
-        "symfony/dotenv": "^5.4 || ^6.0",
-        "symfony/framework-bundle": "^5.4 || ^6.0",
-        "symfony/intl": "^5.4 || ^6.0",
-        "symfony/property-info": "^5.4 || ^6.0",
-        "symfony/web-profiler-bundle": "^5.4 || ^6.0",
-        "symfony/webpack-encore-bundle": "^1.17",
-        "weirdan/doctrine-psalm-plugin": "^2.9"
+        "sylius/sylius": "~1.12.13",
+        "symfony/debug-bundle": "^5.4 || ^6.4",
+        "symfony/dotenv": "^5.4 || ^6.4",
+        "symfony/intl": "^5.4 || ^6.4",
+        "symfony/property-info": "^5.4 || ^6.4",
+        "symfony/web-profiler-bundle": "^5.4 || ^6.4",
+        "symfony/webpack-encore-bundle": "^1.17.2",
+        "weirdan/doctrine-psalm-plugin": "^2.9",
+        "willdurand/negotiation": "^3.1"
     },
     "prefer-stable": true,
     "autoload": {
@@ -87,7 +92,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Setono\\SyliusGiftCardPlugin\\": "tests/"
+            "Setono\\SyliusGiftCardPlugin\\Tests\\": "tests/"
         },
         "classmap": [
             "tests/Application/Kernel.php"
@@ -95,65 +100,17 @@
     },
     "config": {
         "allow-plugins": {
-            "composer/package-versions-deprecated": true,
             "dealerdirect/phpcodesniffer-composer-installer": false,
             "ergebnis/composer-normalize": true,
-            "symfony/thanks": false,
-            "ocramius/package-versions": true
+            "infection/extension-installer": true,
+            "symfony/thanks": false
         },
         "sort-packages": true
     },
     "scripts": {
-        "all": [
-            "@checks",
-            "@tests"
-        ],
         "analyse": "psalm",
-        "assets": [
-            "@ensure-assets-installed",
-            "@ensure-assets-compiled"
-        ],
-        "behat": [
-            "SYMFONY_ENV=test composer ensure-database-created",
-            "SYMFONY_ENV=test composer ensure-schema-updated",
-            "SYMFONY_ENV=test composer ensure-env-copied",
-            "php -d memory_limit=-1 vendor/bin/behat --tags=\"~@javascript\" --no-interaction --format=progress"
-        ],
         "check-style": "ecs check",
-        "checks": [
-            "@check-style",
-            "@analyse"
-        ],
-        "ensure-assets-compiled": "[[ -d tests/Application/public/assets ]] || (cd tests/Application && yarn build && composer ensure-env-copied && bin/console assets:install public -e ${SYMFONY_ENV:-'dev'})",
-        "ensure-assets-installed": "[[ -d tests/Application/node_modules ]] || (cd tests/Application && yarn install)",
-        "ensure-database-created": "composer ensure-env-copied && (cd tests/Application && bin/console doctrine:database:create --if-not-exists -e ${SYMFONY_ENV:-'dev'})",
-        "ensure-env-copied": "([[ ${SYMFONY_ENV:-'dev'} == 'dev' ]] && composer ensure-env-dev-copied) || ([[ ${SYMFONY_ENV:-'dev'} == 'test' ]] && composer ensure-env-test-copied) || echo 'Unknown environment ${SYMFONY_ENV}'",
-        "ensure-env-dev-copied": "(cd tests/Application && ([[ -f .env.local ]] || cp .env .env.local))",
-        "ensure-env-test-copied": "(cd tests/Application && ([[ -f .env.test.local ]] || cp .env.test .env.test.local))",
-        "ensure-schema-updated": "composer ensure-env-copied && (cd tests/Application && bin/console doctrine:schema:update --force -e ${SYMFONY_ENV:-'dev'})",
-        "ensure-vendors-installed": "[[ -f vendor/autoload.php ]] || php -d memory_limit=-1 /usr/local/bin/composer install",
         "fix-style": "ecs check --fix",
-        "fixtures": [
-            "@ensure-database-created",
-            "@ensure-schema-updated",
-            "(cd tests/Application && php -d memory_limit=-1 bin/console sylius:fixtures:load --no-interaction -e ${SYMFONY_ENV:-'dev'})"
-        ],
-        "phpspec": "phpspec run -vvv",
-        "phpunit": "phpunit",
-        "run": [
-            "@ensure-env-copied",
-            "(cd tests/Application && bin/console server:run -d public -e ${SYMFONY_ENV:-'dev'})"
-        ],
-        "tests": [
-            "@phpspec",
-            "@phpunit",
-            "@behat"
-        ],
-        "try": [
-            "@ensure-vendors-installed",
-            "@assets",
-            "@fixtures",
-            "@run"
-        ]
+        "phpunit": "phpunit"
     }
 }

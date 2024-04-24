@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Api\Controller\Action;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Api\Controller\Action;
 
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Setono\SyliusGiftCardPlugin\Api\Controller\Action\ResendGiftCardEmailAction;
 use Setono\SyliusGiftCardPlugin\EmailManager\GiftCardEmailManagerInterface;
 use Setono\SyliusGiftCardPlugin\Model\GiftCard;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Order;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItemUnit;
 use Sylius\Component\Core\Model\Customer;
 use Sylius\Component\Core\Model\OrderItem;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Order;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItemUnit;
 
 final class ResendGiftCardEmailActionTest extends TestCase
 {

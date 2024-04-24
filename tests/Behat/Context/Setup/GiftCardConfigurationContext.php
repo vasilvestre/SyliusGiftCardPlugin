@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Setup;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Setup;
 
 use Behat\Behat\Context\Context;
 use Setono\SyliusGiftCardPlugin\Factory\GiftCardConfigurationFactoryInterface;
@@ -16,7 +16,7 @@ final class GiftCardConfigurationContext implements Context
 
     public function __construct(
         RepositoryInterface $giftCardConfigurationRepository,
-        GiftCardConfigurationFactoryInterface $giftCardConfigurationFactory
+        GiftCardConfigurationFactoryInterface $giftCardConfigurationFactory,
     ) {
         $this->giftCardConfigurationRepository = $giftCardConfigurationRepository;
         $this->giftCardConfigurationFactory = $giftCardConfigurationFactory;

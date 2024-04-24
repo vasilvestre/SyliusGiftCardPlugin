@@ -6,12 +6,12 @@
         <defaults public="true"/>
 
         <service id="setono_sylius_gift_card.behat.context.ui.admin.managing_gift_cards"
-                 class="Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Ui\Admin\ManagingGiftCardsContext">
+                 class="Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Ui\Admin\ManagingGiftCardsContext">
             <argument type="service" id="setono_sylius_gift_card.behat.page.admin.product.create"/>
         </service>
 
         <service id="setono_sylius_gift_card.behat.context.ui.shop.checkout"
-                 class="Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Ui\Shop\CheckoutContext">
+                 class="Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Ui\Shop\CheckoutContext">
             <argument type="service" id="sylius.behat.context.ui.shop.checkout.complete"/>
             <argument type="service" id="sylius.behat.context.setup.order"/>
             <argument type="service" id="sylius.repository.order"/>
@@ -19,13 +19,13 @@
         </service>
 
         <service id="setono_sylius_gift_card.behat.context.ui.shop.cart"
-                 class="Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Ui\Shop\CartContext">
+                 class="Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Ui\Shop\CartContext">
             <argument type="service" id="setono_sylius_gift_card.behat.page.shop.cart.cart_summary"/>
             <argument type="service" id="setono_sylius_gift_card.behat.page.shop.product.show"/>
         </service>
 
         <service id="setono_sylius_gift_card.behat.context.ui.email"
-                 class="Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Ui\EmailContext">
+                 class="Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Ui\EmailContext">
             <argument type="service" id="sylius.behat.email_checker"/>
             <argument type="service" id="sylius.repository.order"/>
             <argument type="service" id="setono_sylius_gift_card.repository.gift_card"/>

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Form\Extension;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Form\Extension;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityManagerInterface;
@@ -13,14 +13,14 @@ use Setono\SyliusGiftCardPlugin\Form\Extension\AddToCartTypeExtension;
 use Setono\SyliusGiftCardPlugin\Model\GiftCardInterface;
 use Setono\SyliusGiftCardPlugin\Order\AddToCartCommand;
 use Setono\SyliusGiftCardPlugin\Order\GiftCardInformationInterface;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Order;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItem;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\OrderItemUnit;
+use Setono\SyliusGiftCardPlugin\Tests\Application\Model\Product;
 use Sylius\Component\Core\Model\ChannelInterface;
 use Sylius\Component\Core\Model\ChannelPricingInterface;
 use Sylius\Component\Core\Model\ProductVariantInterface;
 use Symfony\Component\Form\FormEvent;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Order;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItem;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\OrderItemUnit;
-use Tests\Setono\SyliusGiftCardPlugin\Application\Model\Product;
 
 final class AddToCartTypeExtensionTest extends TestCase
 {
@@ -52,7 +52,7 @@ final class AddToCartTypeExtensionTest extends TestCase
         $formEvent->getData()->willReturn(new AddToCartCommand(
             $cart->reveal(),
             $orderItem->reveal(),
-            $giftCardInformation->reveal()
+            $giftCardInformation->reveal(),
         ));
 
         $giftCard = $this->prophesize(GiftCardInterface::class);
@@ -97,7 +97,7 @@ final class AddToCartTypeExtensionTest extends TestCase
         $formEvent->getData()->willReturn(new AddToCartCommand(
             $cart->reveal(),
             $orderItem->reveal(),
-            $giftCardInformation->reveal()
+            $giftCardInformation->reveal(),
         ));
 
         $giftCard = $this->prophesize(GiftCardInterface::class);

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Api\Admin;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Api\Admin;
 
 use Behat\Behat\Context\Context;
 use Sylius\Behat\Client\ApiClientInterface;
@@ -18,7 +18,7 @@ final class ManagingGiftCardsBalanceContext implements Context
 
     public function __construct(
         ApiClientInterface $client,
-        ResponseCheckerInterface $responseChecker
+        ResponseCheckerInterface $responseChecker,
     ) {
         $this->client = $client;
         $this->responseChecker = $responseChecker;

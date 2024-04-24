@@ -35,7 +35,7 @@ final class DownloadGiftCardPdfAction
         AuthorizationCheckerInterface $authChecker,
         GiftCardConfigurationProviderInterface $configurationProvider,
         PdfRendererInterface $giftCardPDFRenderer,
-        UrlGeneratorInterface $urlGenerator
+        UrlGeneratorInterface $urlGenerator,
     ) {
         $this->giftCardRepository = $giftCardRepository;
         $this->authChecker = $authChecker;
@@ -63,7 +63,7 @@ final class DownloadGiftCardPdfAction
             return $this->sendErrorResponse(
                 $request,
                 $redirectUrl,
-                'Configuration not found for this gift card. Create one by going to the gift card configuration.'
+                'Configuration not found for this gift card. Create one by going to the gift card configuration.',
             );
         }
 

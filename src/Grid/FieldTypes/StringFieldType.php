@@ -44,6 +44,7 @@ final class StringFieldType implements FieldTypeInterface
 
     /**
      * @param mixed $value
+     *
      * @psalm-assert-if-true null|scalar|object $value
      */
     private static function isStringable($value): bool

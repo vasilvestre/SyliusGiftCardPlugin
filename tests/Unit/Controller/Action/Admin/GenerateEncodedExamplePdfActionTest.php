@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Controller\Action\Admin;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Controller\Action\Admin;
 
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
@@ -50,7 +50,7 @@ final class GenerateEncodedExamplePdfActionTest extends TestCase
             $exampleGiftCardFactory->reveal(),
             $giftCardConfigurationRepository->reveal(),
             $giftCardPDFRenderer->reveal(),
-            $formFactory->reveal()
+            $formFactory->reveal(),
         );
         $response = $action($request, $id);
         $this->assertEquals(\base64_encode($pdfContent), $response->getContent());

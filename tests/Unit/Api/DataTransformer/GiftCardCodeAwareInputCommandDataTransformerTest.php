@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Api\DataTransformer;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Api\DataTransformer;
 
 use PHPUnit\Framework\TestCase;
 use Setono\SyliusGiftCardPlugin\Api\Command\AddGiftCardToOrder;
@@ -37,7 +37,7 @@ final class GiftCardCodeAwareInputCommandDataTransformerTest extends TestCase
         $transformedCommand = $dataTransformer->transform(
             $addGiftCardToOrder,
             GiftCardCodeAwareInterface::class,
-            ['object_to_populate' => $giftCard]
+            ['object_to_populate' => $giftCard],
         );
         self::assertEquals('gc_code', $transformedCommand->getGiftCardCode());
     }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Api\CommandHandler;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Api\CommandHandler;
 
 use Doctrine\Persistence\ObjectManager;
 use PHPUnit\Framework\TestCase;
@@ -44,7 +44,7 @@ final class CreateGiftCardConfigurationHandlerTest extends TestCase
 
         $handler = new CreateGiftCardConfigurationHandler(
             $giftCardConfigurationFactory->reveal(),
-            $giftCardConfigurationManager->reveal()
+            $giftCardConfigurationManager->reveal(),
         );
 
         $giftCardConfigurationManager->persist($giftCardConfiguration->reveal())->shouldBeCalled();
@@ -67,7 +67,7 @@ final class CreateGiftCardConfigurationHandlerTest extends TestCase
 
         $handler = new CreateGiftCardConfigurationHandler(
             $giftCardConfigurationFactory->reveal(),
-            $giftCardConfigurationManager->reveal()
+            $giftCardConfigurationManager->reveal(),
         );
 
         $giftCardConfigurationManager->persist($giftCardConfiguration->reveal())->shouldBeCalled();

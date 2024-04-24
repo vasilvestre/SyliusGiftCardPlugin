@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\OrderProcessor;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\OrderProcessor;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use PHPUnit\Framework\TestCase;
@@ -65,14 +65,14 @@ final class OrderGiftCardProcessorTest extends TestCase
         $adjustmentFactory->createWithData(
             AdjustmentInterface::ORDER_GIFT_CARD_ADJUSTMENT,
             Argument::type('string'),
-            -50
+            -50,
         )->willReturn($adjustment1);
 
         $adjustment2 = $this->prophesize(AdjustmentInterface::class);
         $adjustmentFactory->createWithData(
             AdjustmentInterface::ORDER_GIFT_CARD_ADJUSTMENT,
             Argument::type('string'),
-            -130
+            -130,
         )->willReturn($adjustment2);
 
         $adjustment1->setOriginCode('gift-card-code-1')->shouldBeCalled();

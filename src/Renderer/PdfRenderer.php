@@ -39,7 +39,7 @@ final class PdfRenderer implements PdfRendererInterface
         LocaleContextInterface $localeContext,
         GeneratorInterface $snappy,
         PdfRenderingOptionsProviderInterface $renderingOptionsProvider,
-        NormalizerInterface $normalizer
+        NormalizerInterface $normalizer,
     ) {
         $this->twig = $twig;
         $this->configurationProvider = $configurationProvider;
@@ -54,7 +54,7 @@ final class PdfRenderer implements PdfRendererInterface
         GiftCardInterface $giftCard,
         GiftCardConfigurationInterface $giftCardConfiguration = null,
         ChannelInterface $channel = null,
-        string $localeCode = null
+        string $localeCode = null,
     ): PdfResponse {
         if (null === $channel) {
             $order = $giftCard->getOrder();

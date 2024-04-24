@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Unit\Api\Doctrine\QueryCollectionExtension;
+namespace Setono\SyliusGiftCardPlugin\Tests\Unit\Api\Doctrine\QueryCollectionExtension;
 
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Util\QueryNameGeneratorInterface;
 use Doctrine\DBAL\Types\Types;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Setono\SyliusGiftCardPlugin\Behat\Context\Api\Admin;
+namespace Setono\SyliusGiftCardPlugin\Tests\Behat\Context\Api\Admin;
 
 use ApiPlatform\Core\Api\IriConverterInterface;
 use Behat\Behat\Context\Context;
@@ -25,7 +25,7 @@ final class ManagingGiftCardsContext implements Context
     public function __construct(
         ApiClientInterface $client,
         ResponseCheckerInterface $responseChecker,
-        IriConverterInterface $iriConverter
+        IriConverterInterface $iriConverter,
     ) {
         $this->client = $client;
         $this->responseChecker = $responseChecker;
@@ -125,7 +125,7 @@ final class ManagingGiftCardsContext implements Context
 
         Assert::false(
             $this->responseChecker->hasItemWithValue($response, 'code', $code),
-            sprintf('Gift card with code %s still exists, but it should not', $code)
+            sprintf('Gift card with code %s still exists, but it should not', $code),
         );
     }
 

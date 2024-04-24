@@ -27,7 +27,7 @@ final class OrderGiftCardOperator implements OrderGiftCardOperatorInterface
 
     public function __construct(
         EntityManagerInterface $giftCardManager,
-        GiftCardEmailManagerInterface $giftCardOrderEmailManager
+        GiftCardEmailManagerInterface $giftCardOrderEmailManager,
     ) {
         $this->giftCardManager = $giftCardManager;
         $this->giftCardOrderEmailManager = $giftCardOrderEmailManager;

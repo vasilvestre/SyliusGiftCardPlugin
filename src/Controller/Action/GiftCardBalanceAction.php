@@ -21,7 +21,7 @@ final class GiftCardBalanceAction
 
     public function __construct(
         GiftCardRepositoryInterface $giftCardRepository,
-        Environment $twig
+        Environment $twig,
     ) {
         $this->giftCardRepository = $giftCardRepository;
         $this->twig = $twig;
@@ -30,7 +30,7 @@ final class GiftCardBalanceAction
     public function __invoke(Request $request): Response
     {
         $giftCardBalanceCollection = GiftCardBalanceCollection::createFromGiftCards(
-            $this->giftCardRepository->findEnabled()
+            $this->giftCardRepository->findEnabled(),
         );
 
         return new Response($this->twig->render('@SetonoSyliusGiftCardPlugin/Admin/giftCardBalance.html.twig', [
